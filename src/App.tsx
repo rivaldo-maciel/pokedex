@@ -1,11 +1,12 @@
-import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
+import PokeRoutes from './routes/routes';
 
 function App() {
   return (
-    <div className="App">
-      pokedex
-    </div>
+    <BrowserRouter>
+      <PokeRoutes />
+    </BrowserRouter>
   );
 }
 
