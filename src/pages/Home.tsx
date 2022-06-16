@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import Pokedex from '../assets/pokedex-logo.png';
 import PokeBall from '../assets/poke-ball.png';
 
 export default function Home() {
+  const [pokemon, setPokemon] = useState<string>("");
   return (
     <main className="flex flex-col">
       <div className="h-[300px] bg-red-600 flex flex-col items-center">
@@ -22,9 +24,13 @@ export default function Home() {
             type="text"
             className="w-[240px] h-[40px] rounded-[10px] text-[22px] p-[8px]"
             placeholder="Search a pokemon"
+            onChange={(e) => setPokemon(e.target.value)}
           />
           <button
           className="mt-[20px] w-[240px] h-[40px] bg-green-600 rounded-[10px] font-bold text-[25px] text-[white]"
+          onClick={(e) => {
+            e.preventDefault();
+          }}
         >
           GO!
         </button>
