@@ -2,7 +2,7 @@ type moves = {
   move: {
     name: string,
   }
-}
+};
 
 type sprites = {
   other: {
@@ -11,20 +11,20 @@ type sprites = {
       front_shiny: string,
     }
   }
-}
+};
 
 type stat = {
   base_stat: string,
   stat: {
     name: string
   }
-}
+};
 
 type type ={
   type: {
     name: string
   }
-}
+};
 
 export type PokeInfos = {
   id: string,
@@ -35,13 +35,25 @@ export type PokeInfos = {
   moves: Array<moves>,
   sprites: sprites,
   stats: Array<stat>
-}
+};
 
 export type PokeRequest = {
   data: PokeInfos
-}
+};
 
 export type PropsPokeContext = {
   pokeInfos: PokeInfos | null,
   setPokeInfos: (infos: PokeInfos) => void,
+  pokesByGen: PokesByGen | null,
+  setPokesByGen: (pokes: PokesByGen) => void,
 };
+
+type pokeUrls = {
+  name: string,
+  url: string
+};
+
+export type PokesByGen = {
+  next: string,
+  results: Array<pokeUrls>
+}
