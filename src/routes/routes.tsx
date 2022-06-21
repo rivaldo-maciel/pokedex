@@ -1,11 +1,16 @@
 import {Routes, Route } from 'react-router-dom';
+import PokeProvider from '../context/PokeProvider';
 import Home from '../pages/Home';
+import PokeDex from '../pages/PokeDex';
 
 const PokeRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home/>} />
-    </Routes>
+    <PokeProvider>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/pokedex" element={<PokeDex/>} />
+      </Routes>
+    </PokeProvider>
   );
 };
 

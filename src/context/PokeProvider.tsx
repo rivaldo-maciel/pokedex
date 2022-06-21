@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+import { PokeInfos } from '../types/pokeTypes';
 import pokeContext from './pokeContext';
 
-interface IProps {
+interface IChildrenType {
   children: React.ReactNode;
 }
 
-const PokeProvider = (props: IProps) => {
-  const [pokeInfos, setPokeInfos] = useState({})
+const PokeProvider = (props: IChildrenType) => {
+  const [pokeInfos, setPokeInfos] = useState<PokeInfos | null>(null);
+  
   return (
     <pokeContext.Provider value={{ pokeInfos, setPokeInfos }} >
       {
