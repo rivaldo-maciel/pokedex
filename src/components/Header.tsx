@@ -18,9 +18,9 @@ const Header = () => {
   return (
     <header className="h-[80px] bg-red-600 shadow-[0_5px_5px_0_rgba(0,0,0,0.3)] flex items-center justify-center">
       <input
-        className="h-[38px] rounded-md text-[18px] p-3"
+        className="h-[38px] w-[280px] rounded-md text-[18px] p-3"
         type="text"
-        placeholder="search a pokemon"
+        placeholder="search a pokemon:"
         onChange={
           (e) => {
             setPokemon(e.target.value);

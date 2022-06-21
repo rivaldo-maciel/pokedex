@@ -1,0 +1,10 @@
+.gen-options {
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+  position: absolute;
+}
+
+.drop-down-gen > .gen:focus + .gen-options {
+  opacity: 1;
+}
