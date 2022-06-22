@@ -64,3 +64,8 @@ export type iconsProp = {
   icon: string,
   type: string
 }
+
+export type measurementProp = {
+  height: string,
+  weight: string
+} 

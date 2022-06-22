@@ -11,7 +11,10 @@ const TypeIcons = () => {
     <div className="flex justify-evenly] mt-[30px] text-white">
       {
         types.map((type) => (
-          <div className="w-[100%] flex flex-col items-center">
+          <div
+            className="w-[100%] flex flex-col items-center"
+            key={ type.type.name }
+          >
             <img
               src={icons[type.type.name as keyof typeIcons]}
               alt="type icon"

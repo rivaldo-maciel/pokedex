@@ -7,12 +7,12 @@ import PokeImage from '../../components/PokeImage';
 import colorTypes from './colorTypes';
 import { colorType } from './colorTypes';
 import TypeIcons from '../../components/TypeIcons';
+import BodyMeasurement from '../../components/BodyMeasurement';
 
 const PokeDex = () => {
   const context = useContext<PropsPokeContext | null>(pokeContext);
   const pokeInfos = context?.pokeInfos;
   const {
-    id,
     height,
     weight,
     name,
@@ -29,6 +29,7 @@ const PokeDex = () => {
       <TitleContent name={name}/>
       <PokeImage src={sprites.front_default} />
       <TypeIcons />
+      <BodyMeasurement height={height} weight={weight} />
     </main>
   );
 }
