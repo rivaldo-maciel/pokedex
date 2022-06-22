@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PokeInfos, PokesByGen } from '../types/pokeTypes';
+import { PokeInfos } from '../types/pokeTypes';
 import pokeContext from './pokeContext';
 
 interface IChildrenType {
@@ -8,10 +8,9 @@ interface IChildrenType {
 
 const PokeProvider = (props: IChildrenType) => {
   const [pokeInfos, setPokeInfos] = useState<PokeInfos | null>(null);
-  const [pokesByGen, setPokesByGen] = useState<PokesByGen | null>(null);
   
   return (
-    <pokeContext.Provider value={{ pokeInfos, setPokeInfos, pokesByGen, setPokesByGen }} >
+    <pokeContext.Provider value={{ pokeInfos, setPokeInfos }} >
       {
         props.children
       }

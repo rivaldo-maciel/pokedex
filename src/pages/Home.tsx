@@ -1,46 +1,30 @@
 import { useNavigate } from 'react-router-dom';
 import Pokedex from '../assets/pokedex-logo.png';
 import PokeBall from '../assets/poke-ball.png';
-import { useContext, useEffect, useState } from 'react';
 import pokeContext from '../context/pokeContext';
-import axios from 'axios';
-
-import pikachuLoading from '../assets/pikachu-running.gif';
+import { PropsPokeContext } from '../types/pokeTypes';
+import { useContext, useEffect } from 'react';
+import getPokeInfos from '../services/getPokeInfos';
 
 export default function Home() {
-  const [loading, setLoading] = useState<boolean>(true);
+  const context = useContext<PropsPokeContext | null>(pokeContext);
   const navigate = useNavigate();
-  const context = useContext(pokeContext);
 
   useEffect(() => {
-    axios.get('https://pokeapi.co/api/v2/pokemon/?limit=151')
-    .then((result) => context?.setPokesByGen(result.data));
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    if (context?.pokeInfos === null) {
+      getPokeInfos('1').then((data) => context?.setPokeInfos(data));
+    }
   }, [context]);
 
   return (
-    <main className="flex flex-col">
-      <div className="h-[300px] bg-red-600 flex flex-col items-center">
-        <img src={Pokedex} alt="pokedex logo" className="w-[288px] mt-[96px]" />
-        <img src={PokeBall} alt="pokeball" className="w-[240px] mt-[30px]" />
+    <main className="flex flex-col bg-slate-900 h-[100vh]">
+      <div className="h-[300px] flex flex-col items-center">
+        <img src={Pokedex} alt="pokedex logo" className="w-[288px] mt-[50px]" />
+        <img src={PokeBall} alt="pokeball" className="w-[240px] mt-[50px]" />
       </div>
       <div className="flex flex-col items-center">
-        {
-          loading
-          ? (
-            <>
-              <img
-              src={pikachuLoading}
-              alt="pikachu running"
-              className="w-[80px] h-[80px] mt-[160px]"
-              />
-              <p>loading...</p>
-            </>
-          ) : (
             <button
-            className="mt-[180px] w-[140px] h-[40px] bg-green-700 rounded-[20px] font-bold text-[25px] text-[white]"
+            className="mt-[180px] w-[140px] h-[40px] bg-yellow-500 rounded-[20px] font-bold text-[25px] text-slate-900 shadow-lg"
             onClick={(e) => {
               e.preventDefault();
               navigate('/pokedex');
@@ -48,9 +32,6 @@ export default function Home() {
           >
             GO!
             </button>
-          )
-        }
-
       </div>
     </main>
   );

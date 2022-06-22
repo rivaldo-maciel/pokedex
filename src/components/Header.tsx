@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import getPokeInfos from "../services/getPokeInfos";
 import pokeContext from "../context/pokeContext";
 import { PropsPokeContext } from "../types/pokeTypes";
@@ -9,16 +9,27 @@ const Header = () => {
   const [pokemon, setPokemon] = useState<string>("");
 
   const context = useContext<PropsPokeContext | null>(pokeContext);
+  const id = context?.pokeInfos?.id;
 
-  const searchPokemon = async (): Promise<void> => {
+  const searchPokemon = async (pokemon: string): Promise<void> => {
     const result = await getPokeInfos(pokemon);
     context?.setPokeInfos(result);
   };
 
   return (
-    <header className="h-[80px] bg-red-600 shadow-[0_5px_5px_0_rgba(0,0,0,0.3)] flex items-center justify-center">
+    <header className="h-[80px] flex items-center justify-center">
+      <span className="mr-[30px] text-[18px] text-white">
+        {
+          id && Number(id) > 9
+          ? (
+            `#0${id}`
+          ) : (
+            `#00${id}`
+          )
+        }
+      </span>
       <input
-        className="h-[38px] w-[280px] rounded-md text-[18px] p-3"
+        className="h-[38px] w-[250px] rounded-md text-[18px] p-3"
         type="text"
         placeholder="search a pokemon:"
         onChange={
@@ -30,7 +41,9 @@ const Header = () => {
       <button
         className="w-[40px] ml-[-35px]"
         type="button"
-        onClick={() => {}}
+        onClick={() => {
+          searchPokemon(pokemon);
+        }}
       >
         <img
           src={searchIcon}

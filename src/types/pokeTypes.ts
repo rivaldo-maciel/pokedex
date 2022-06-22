@@ -43,9 +43,7 @@ export type PokeRequest = {
 
 export type PropsPokeContext = {
   pokeInfos: PokeInfos | null,
-  setPokeInfos: (infos: PokeInfos) => void,
-  pokesByGen: PokesByGen | null,
-  setPokesByGen: (pokes: PokesByGen) => void,
+  setPokeInfos: (infos: PokeInfos) => void
 };
 
 type pokeUrls = {
