@@ -16,7 +16,7 @@ type stat = {
   }
 };
 
-type type ={
+export type type ={
   type: {
     name: string
   }
@@ -58,4 +58,9 @@ export type pokeImageProp = {
 
 export type pokeNameProp = {
   name: string;
+}
+
+export type iconsProp = {
+  icon: string,
+  type: string
 }

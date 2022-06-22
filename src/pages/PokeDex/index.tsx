@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import PokeImage from '../../components/PokeImage';
 import colorTypes from './colorTypes';
 import { colorType } from './colorTypes';
+import TypeIcons from '../../components/TypeIcons';
 
 const PokeDex = () => {
   const context = useContext<PropsPokeContext | null>(pokeContext);
@@ -27,6 +28,7 @@ const PokeDex = () => {
       <Header />
       <TitleContent name={name}/>
       <PokeImage src={sprites.front_default} />
+      <TypeIcons />
     </main>
   );
 }
