@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import Pokedex from '../assets/pokedex-logo.png';
-import PokeBall from '../assets/poke-ball.png';
-import pokeContext from '../context/pokeContext';
-import { PropsPokeContext } from '../types/pokeTypes';
+import Pokedex from '../../assets/pokedex-logo.png';
+import PokeBall from '../../assets/poke-ball.png';
+import pokeContext from '../../context/pokeContext';
+import { PropsPokeContext } from '../../types/pokeTypes';
 import { useContext, useEffect } from 'react';
-import getPokeInfos from '../services/getPokeInfos';
+import getPokeInfos from '../../services/getPokeInfos';
 
 export default function Home() {
   const context = useContext<PropsPokeContext | null>(pokeContext);

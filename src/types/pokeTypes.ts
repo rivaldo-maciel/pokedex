@@ -5,12 +5,8 @@ type moves = {
 };
 
 type sprites = {
-  other: {
-    home: {
-      front_default: string,
-      front_shiny: string,
-    }
-  }
+  front_default: string,
+  front_shiny: string,
 };
 
 type stat = {
@@ -54,4 +50,12 @@ type pokeUrls = {
 export type PokesByGen = {
   next: string,
   results: Array<pokeUrls>
+}
+
+export type pokeImageProp = {
+  src: string;
+}
+
+export type pokeNameProp = {
+  name: string;
 }
