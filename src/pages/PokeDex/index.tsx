@@ -8,6 +8,7 @@ import colorTypes from './colorTypes';
 import { colorType } from './colorTypes';
 import TypeIcons from '../../components/TypeIcons';
 import BodyMeasurement from '../../components/BodyMeasurement';
+import Stats from '../../components/Stats';
 
 const PokeDex = () => {
   const context = useContext<PropsPokeContext | null>(pokeContext);
@@ -24,12 +25,13 @@ const PokeDex = () => {
   const typeName = types[0].type.name as keyof colorType;
   const typeColor = colorTypes[typeName];
   return (
-    <main className="h-[100vh]" style={{ backgroundColor: typeColor}}>
-      <Header />
+    <main className="" style={{ backgroundColor: typeColor}}>
+      <Header bg={typeColor}/>
       <TitleContent name={name}/>
       <PokeImage src={sprites.front_default} />
       <TypeIcons />
       <BodyMeasurement height={height} weight={weight} />
+      <Stats stats={stats}/>
     </main>
   );
 }

@@ -5,7 +5,7 @@ const PokeImage = ({ src }: pokeImageProp) => {
     <img
       src={src}
       alt="pokemon"
-      className="mt-[-80px]"
+      className="mt-[-40px]"
     />
   );
 }

@@ -1,11 +1,11 @@
-import { useState, useContext, useEffect } from 'react';
-import getPokeInfos from "../services/getPokeInfos";
-import pokeContext from "../context/pokeContext";
-import { PropsPokeContext } from "../types/pokeTypes";
+import { useState, useContext } from 'react';
+import getPokeInfos from "../../services/getPokeInfos";
+import pokeContext from "../../context/pokeContext";
+import { headerProp, PropsPokeContext } from "../../types/pokeTypes";
 
-import searchIcon from '../assets/search-icon.png';
+import searchIcon from '../../assets/search-icon.png';
 
-const Header = () => {
+const Header = ({ bg }: headerProp) => {
   const [pokemon, setPokemon] = useState<string>("");
 
   const context = useContext<PropsPokeContext | null>(pokeContext);
@@ -17,7 +17,10 @@ const Header = () => {
   };
 
   return (
-    <header className="h-[80px] flex items-center justify-center">
+    <header
+      className="h-[80px] flex items-center justify-center fixed top-0 w-[100%]"
+      style={{ backgroundColor: bg }}
+    >
       <span className="mr-[30px] text-[18px] text-white">
         {
           id && Number(id) > 9

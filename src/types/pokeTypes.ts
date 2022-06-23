@@ -9,7 +9,7 @@ type sprites = {
   front_shiny: string,
 };
 
-type stat = {
+export type stat = {
   base_stat: string,
   stat: {
     name: string
@@ -69,3 +69,11 @@ export type measurementProp = {
   height: string,
   weight: string
 } 
+
+export type headerProp = {
+  bg: string,
+}
+
+export type statsProp = {
+  stats: Array<stat>
+}
