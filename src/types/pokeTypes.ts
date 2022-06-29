@@ -77,3 +77,7 @@ export type headerProp = {
 export type statsProp = {
   stats: Array<stat>
 }
+
+export type spritesProp = {
+  sprites: sprites
+}

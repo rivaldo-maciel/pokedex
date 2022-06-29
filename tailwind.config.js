@@ -4,7 +4,9 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    backgroundImage: {
+      "pokemonBg": "url('./assets/pokemon-bg.jpg')" 
+    }
   },
   plugins: [],
 }
