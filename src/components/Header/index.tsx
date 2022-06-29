@@ -19,6 +19,7 @@ const Header = ({ bg, setLoading }: headerProp) => {
       context?.setPokeInfos(result);
       setLoading(false);
     } catch (err) {
+      setLoading(false);
       setBadRequest(true);
       setTimeout(() => {
         setBadRequest(false);
