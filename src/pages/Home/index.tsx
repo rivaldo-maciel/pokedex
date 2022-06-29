@@ -17,7 +17,7 @@ export default function Home() {
   }, [context]);
 
   return (
-    <main className="flex flex-col h-[100%] lg:flex-row">
+    <main className="flex flex-col h-[100vh] lg:flex-row">
       <div className="bg-slate-800 flex flex-col items-center justify-center h-[100%] lg:w-[50%]">
         <div className="lg: w-[60%] lg: h-[90%]">
           <div className="h-[300px] flex flex-col items-center">
