@@ -55,21 +55,21 @@ export type PokesByGen = {
 };
 
 export type pokeImageProp = {
-  src: string;
+  src: string | undefined;
 };
 
 export type pokeNameProp = {
-  name: string;
+  name: string | undefined;
 };
 
 export type iconsProp = {
   icon: string;
-  type: string;
+  type: string | undefined;
 };
 
 export type measurementProp = {
-  height: string;
-  weight: string;
+  height: string | undefined;
+  weight: string | undefined;
 };
 
 export type headerProp = {
@@ -78,9 +78,9 @@ export type headerProp = {
 };
 
 export type statsProp = {
-  stats: Array<stat>;
+  stats: Array<stat> | undefined;
 };
 
 export type spritesProp = {
-  sprites: sprites;
+  sprites: sprites | undefined;
 };

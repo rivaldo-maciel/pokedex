@@ -7,13 +7,13 @@ const Stats = ({ stats }: statsProp) => {
       <div className="flex mt-[30px] justify-center">
         <div className="w-[150px] border-r border-white text-center text-white">
           <ul>
-            {stats.map((stat, index) => (
+            {stats?.map((stat, index) => (
               <li key={index}>{stat.stat.name.toLocaleUpperCase()}</li>
             ))}
           </ul>
         </div>
         <div className="pl-2">
-          {stats.map((stat, index) => (
+          {stats?.map((stat, index) => (
             <div className="flex" key={index}>
               <div
                 className="h-[20px] mb-[5px] bg-white"

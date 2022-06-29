@@ -1,20 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import Pokedex from '../../assets/pokedex-logo.png';
 import PokeBall from '../../assets/poke-ball.png';
-import pokeContext from '../../context/pokeContext';
-import { PropsPokeContext } from '../../types/pokeTypes';
-import { useContext, useEffect } from 'react';
-import getPokeInfos from '../../services/getPokeInfos';
 
 export default function Home() {
-  const context = useContext<PropsPokeContext | null>(pokeContext);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (context?.pokeInfos === null) {
-      getPokeInfos('1').then((data) => context?.setPokeInfos(data));
-    }
-  }, [context]);
 
   return (
     <main className="flex flex-col h-[100vh] lg:flex-row">
