@@ -13,6 +13,8 @@ const Header = ({ bg }: headerProp) => {
 
   const searchPokemon = async (pokemon: string): Promise<void> => {
     const result = await getPokeInfos(pokemon);
+    console.log(result);
+    
     context?.setPokeInfos(result);
   };
 

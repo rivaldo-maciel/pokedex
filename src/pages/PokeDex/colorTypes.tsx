@@ -36,7 +36,7 @@ const colorTypes = {
   poison: '#9A35C7',
   psychic: '#ED6C8B',
   rock: '#8C8C8C',
-  steel: '#E5E5E5',
+  steel: '#3f4f7c',
   water: '#5194F8'
 };
 
