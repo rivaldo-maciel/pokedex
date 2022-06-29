@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 type moves = {
   move: {
     name: string;
@@ -72,6 +74,7 @@ export type measurementProp = {
 
 export type headerProp = {
   bg: string;
+  setLoading: Dispatch<SetStateAction<boolean>>;
 };
 
 export type statsProp = {

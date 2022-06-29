@@ -5,7 +5,7 @@ import { headerProp, PropsPokeContext } from '../../types/pokeTypes';
 
 import searchIcon from '../../assets/search-icon.png';
 
-const Header = ({ bg }: headerProp) => {
+const Header = ({ bg, setLoading }: headerProp) => {
   const [pokemon, setPokemon] = useState<string>('');
   const [badRequest, setBadRequest] = useState<boolean>(false);
 
@@ -14,8 +14,10 @@ const Header = ({ bg }: headerProp) => {
 
   const searchPokemon = async (pokemon: string): Promise<void> => {
     try {
+      setLoading(true);
       const result = await getPokeInfos(pokemon);
       context?.setPokeInfos(result);
+      setLoading(false);
     } catch (err) {
       setBadRequest(true);
       setTimeout(() => {
