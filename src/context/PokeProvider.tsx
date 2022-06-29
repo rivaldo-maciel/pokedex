@@ -8,12 +8,10 @@ interface IChildrenType {
 
 const PokeProvider = (props: IChildrenType) => {
   const [pokeInfos, setPokeInfos] = useState<PokeInfos | null>(null);
-  
+
   return (
-    <pokeContext.Provider value={{ pokeInfos, setPokeInfos }} >
-      {
-        props.children
-      }
+    <pokeContext.Provider value={{ pokeInfos, setPokeInfos }}>
+      {props.children}
     </pokeContext.Provider>
   );
 };

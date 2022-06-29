@@ -2,7 +2,7 @@ import { statsProp } from '../../types/pokeTypes';
 
 const Stats = ({ stats }: statsProp) => {
   return (
-    <section className="text-center mt-[40px] h-[240px]">
+    <section className="text-center mt-[40px] h-[240px] lg:mt-[60px]">
       <h1 className="text-white">Stats</h1>
       <div className="flex mt-[30px] justify-center">
         <div className="w-[150px] border-r border-white text-center text-white">

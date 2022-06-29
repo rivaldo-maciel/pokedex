@@ -18,26 +18,25 @@ import SteelIcon from '../../assets/TypeIcons/Pokemon_Type_Icon_Steel.png';
 import WaterIcon from '../../assets/TypeIcons/Pokemon_Type_Icon_Water.png';
 
 export type typeIcons = {
-  grass: string,
-  bug: string,
-  dark: string,
-  dragon: string,
-  electric: string,
-  fairy: string,
-  fighting: string,
-  fire: string,
-  flying: string,
-  ghost: string,
-  ground: string,
-  ice: string,
-  normal: string,
-  poison: string,
-  psychic: string,
-  rock: string,
-  steel: string,
-  water: string,
-}
-
+  grass: string;
+  bug: string;
+  dark: string;
+  dragon: string;
+  electric: string;
+  fairy: string;
+  fighting: string;
+  fire: string;
+  flying: string;
+  ghost: string;
+  ground: string;
+  ice: string;
+  normal: string;
+  poison: string;
+  psychic: string;
+  rock: string;
+  steel: string;
+  water: string;
+};
 
 const icons: typeIcons = {
   bug: BugIcon,

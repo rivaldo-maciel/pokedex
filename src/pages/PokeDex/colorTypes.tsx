@@ -1,23 +1,23 @@
 export type colorType = {
-  grass: string,
-  bug: string,
-  dark: string,
-  dragon: string,
-  electric: string,
-  fairy: string,
-  fighting: string,
-  fire: string,
-  flying: string,
-  ghost: string,
-  ground: string,
-  ice: string,
-  normal: string,
-  poison: string,
-  psychic: string,
-  rock: string,
-  steel: string,
-  water: string,
-}
+  grass: string;
+  bug: string;
+  dark: string;
+  dragon: string;
+  electric: string;
+  fairy: string;
+  fighting: string;
+  fire: string;
+  flying: string;
+  ghost: string;
+  ground: string;
+  ice: string;
+  normal: string;
+  poison: string;
+  psychic: string;
+  rock: string;
+  steel: string;
+  water: string;
+};
 
 const colorTypes = {
   grass: '#5BA448',
@@ -38,6 +38,6 @@ const colorTypes = {
   rock: '#8C8C8C',
   steel: '#E5E5E5',
   water: '#5194F8'
-}
+};
 
 export default colorTypes;
