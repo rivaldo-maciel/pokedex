@@ -15,7 +15,7 @@ const Header = ({ bg, setLoading }: headerProp) => {
   const searchPokemon = async (pokemon: string): Promise<void> => {
     try {
       setLoading(true);
-      const result = await getPokeInfos(pokemon);
+      const result = await getPokeInfos(pokemon.toLocaleLowerCase());
       context?.setPokeInfos(result);
       setLoading(false);
     } catch (err) {
