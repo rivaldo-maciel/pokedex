@@ -15,15 +15,13 @@ const Header = ({ bg, setLoading }: headerProp) => {
   const searchPokemon = async (pokemon: string): Promise<void> => {
     try {
       setLoading(true);
+      setBadRequest(false);
       const result = await getPokeInfos(pokemon.toLocaleLowerCase());
       context?.setPokeInfos(result);
       setLoading(false);
     } catch (err) {
-      setLoading(false);
       setBadRequest(true);
-      setTimeout(() => {
-        setBadRequest(false);
-      }, 1500);
+      setLoading(false);
     }
   };
 
