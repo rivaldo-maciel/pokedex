@@ -45,8 +45,9 @@ const Header = ({ bg, setLoading }: headerProp) => {
           />
           <button
             className="w-[40px] h-[26px] ml-[-35px]"
-            type="button"
-            onClick={() => {
+            type="submit"
+            onClick={(e) => {
+              e.preventDefault();
               searchPokemon(pokemon);
             }}
           >
