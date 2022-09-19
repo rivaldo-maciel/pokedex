@@ -9,7 +9,7 @@
 }
 
 .pokedex-title {
-  animation: pokedex-title 1s forwards normal
+  animation: pokedex-title 1s forwards;
 }
 
 .pokeball {

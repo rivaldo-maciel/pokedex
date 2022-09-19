@@ -1,0 +1,7 @@
+@keyframes poke-image {
+  to { width: 288px; }
+}
+
+.poke-image {
+  animation: poke-image 1s forwards 0.1s;
+}

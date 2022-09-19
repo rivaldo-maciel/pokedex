@@ -38,7 +38,13 @@ const PokeDex = () => {
           <div className="lg:flex lg:justify-between lg:w-[60%]">
             <div>
               <PokemonName name={pokeInfos?.name} />
-              <PokeImage src={pokeInfos?.sprites} />
+              <div className="w-[288px] h-[288px] flex justify-center items-center">
+                {
+                  pokeInfos?.sprites && (
+                    <PokeImage src={pokeInfos?.sprites} />
+                  )
+                }
+              </div>
             </div>
             <div className="lg:mt-[50px] h-[100%]">
               <BodyMeasurement
