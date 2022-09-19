@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# Pokedex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Desktop design
 
-## Available Scripts
+<img src="https://github.com/rivaldo-maciel/pokedex/blob/main/pokedex-desktop.png" />
 
-In the project directory, you can run:
+## Mobile Design
 
-### `npm start`
+<p align="center">
+<img src="https://github.com/rivaldo-maciel/pokedex/blob/main/pokedex-mobile.png" align="center" />
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Sobre o projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Esta aplicação consiste em uma pokedex onde é possível pesquisar personagens do anime Pokemon. Nela é possível obter informações como: nome, altura, peso, tipos e status base.
 
-### `npm test`
+## Tecnologias utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React Js
+- Typescript
+- Context API
+- Tailwind Css
 
-### `npm run build`
+## Como abrir
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Acesse a aplicação por meio deste link: https://pokedex-rivaldo-maciel.vercel.app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Abrir em modo de desenvolvimento local
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Abrindo em sua máquina local
 
-### `npm run eject`
+1- Para abrir a aplicação localmente é preciso ter o node instalado em sua máquina ([caso não tenha, clique aqui para instalar](https://www.treinaweb.com.br/blog/instalacao-do-node-js-windows-mac-e-linux)).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2- Clone o repositório utilizando o seguinte link: `git@github.com:rivaldo-maciel/pokedex.git`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3- Acesse a pasta raiz do projeto.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4- Execute o comando `npm install` para instalar as dependências da aplicação
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+5- Execute o comando `npm start` para rodar a aplicação no servidor local (verifique se a porta 3000 de sua máquina não está sendo utilizada)
 
-## Learn More
+### Abrir Utilizando o Docker
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1- Para rodar a aplicação utilizando o Docker é necessário que este esteja instalado em sua máquina ([caso não tenha, clique aqui para instalar](
+https://balta.io/blog/docker-instalacao-configuracao-e-primeiros-passos))
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2- Clone o repositório utilizando o seguinte link: `git@github.com:rivaldo-maciel/pokedex.git`.
+
+3- Acesse a pasta raiz do projeto.
+
+4- Execute o comando `docker build -t pokedex .` para criar a imagem do container.
+
+5- Após o término da criação da imagem, execute o comando `docker run --name pokedex -p 3000:3000 pokedex` para criar e subir o container da aplicação.
+
+6- Abra o link `localhost:3000` em seu navegador. 
+
+
+
+
+
+
+
+
+
