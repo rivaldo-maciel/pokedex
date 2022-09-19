@@ -38,7 +38,7 @@ const PokeDex = () => {
           <div className="lg:flex lg:justify-between lg:w-[60%]">
             <div>
               <PokemonName name={pokeInfos?.name} />
-              <PokeImage src={pokeInfos?.sprites.front_default} />
+              <PokeImage src={pokeInfos?.sprites} />
             </div>
             <div className="lg:mt-[50px] h-[100%]">
               <BodyMeasurement

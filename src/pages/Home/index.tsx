@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import Pokedex from '../../assets/pokedex-logo.png';
 import PokeBall from '../../assets/poke-ball.png';
+import './style.css';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -13,12 +14,12 @@ export default function Home() {
             <img
               src={Pokedex}
               alt="pokedex logo"
-              className="w-[288px] mt-[50px]"
+              className="pokedex-title w-[288px] mt-[50px]"
             />
             <img
               src={PokeBall}
               alt="pokeball"
-              className="w-[240px] mt-[50px]"
+              className="pokeball w-[240px] mt-[50px]"
             />
           </div>
           <div className="flex flex-col items-center">

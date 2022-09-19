@@ -1,0 +1,17 @@
+@keyframes pokeball {
+  from { transform: rotate(360deg) }
+  to { transform: rotate(0) }
+}
+
+@keyframes pokedex-title {
+  from { transform: translateX(-500px) }
+  to { transform: translateX(0) }
+}
+
+.pokedex-title {
+  animation: pokedex-title 1s forwards normal
+}
+
+.pokeball {
+  animation: pokeball 2s forwards normal
+}

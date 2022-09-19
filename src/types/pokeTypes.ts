@@ -55,7 +55,7 @@ export type PokesByGen = {
 };
 
 export type pokeImageProp = {
-  src: string | undefined;
+  src: sprites | undefined;
 };
 
 export type pokeNameProp = {
