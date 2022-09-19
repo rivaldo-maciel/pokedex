@@ -27,7 +27,7 @@ const PokeDex = () => {
 
   return (
     <main
-      className="flex flex-col justify-center items-center lg:h-[100vh]"
+      className="flex flex-col justify-evenly items-center lg:h-[100vh]"
       style={{ backgroundColor: typeColor }}
     >
       <Header bg={typeColor} setLoading={setLoading} />
@@ -38,7 +38,7 @@ const PokeDex = () => {
           <div className="lg:flex lg:justify-between lg:w-[60%]">
             <div>
               <PokemonName name={pokeInfos?.name} />
-              <div className="w-[288px] h-[288px] flex justify-center items-center">
+              <div className="w-[288px] h-[288px] lg:w-[388px] lg:h-[388px] flex justify-center items-center">
                 {
                   pokeInfos?.sprites && (
                     <PokeImage src={pokeInfos?.sprites} />
@@ -46,7 +46,7 @@ const PokeDex = () => {
                 }
               </div>
             </div>
-            <div className="lg:mt-[50px] h-[100%]">
+            <div className="h-[100%]">
               <BodyMeasurement
                 height={pokeInfos?.height}
                 weight={pokeInfos?.weight}

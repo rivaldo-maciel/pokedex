@@ -1,5 +1,5 @@
 @keyframes poke-image {
-  to { width: 288px; }
+  to { width: 100%; }
 }
 
 .poke-image {
