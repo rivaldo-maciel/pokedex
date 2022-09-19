@@ -1,0 +1,11 @@
+@keyframes poke-infos {
+  from { transform: translateX(200px) }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@media (min-width: 640px) {
+  .poke-infos {
+    opacity: 0;
+    animation: poke-infos 1.5s forwards normal;
+  }
+}

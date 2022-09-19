@@ -11,6 +11,7 @@ import BodyMeasurement from '../../components/BodyMeasurement';
 import Stats from '../../components/Stats';
 import Loading from '../../components/Loading';
 import getPokeInfos from '../../services/getPokeInfos';
+import './style.css';
 
 const PokeDex = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -46,7 +47,7 @@ const PokeDex = () => {
                 }
               </div>
             </div>
-            <div className="h-[100%]">
+            <div className="poke-infos h-[100%]">
               <BodyMeasurement
                 height={pokeInfos?.height}
                 weight={pokeInfos?.weight}
